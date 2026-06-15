@@ -16,7 +16,6 @@ import {
   Download,
   Github,
   Linkedin,
-  Smartphone,
   Monitor,
   CheckCircle,
   MessageSquare,
@@ -27,6 +26,8 @@ import {
   UserCheck,
   Menu,
   X,
+  GraduationCap,
+  Cloud,
 } from 'lucide-react';
 import './App.css';
 
@@ -82,7 +83,7 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const navItems = ['Home', 'About', 'Experience', 'Skills', 'Projects', 'Contact'];
+  const navItems = ['Home', 'About', 'Experience', 'Skills', 'Projects', 'Education', 'Contact'];
 
   return (
     <div className='app'>
@@ -161,15 +162,14 @@ function App() {
             >
               <div className='hero-badge'>
                 <Sparkles size={16} />
-                Senior Frontend Developer & Team Lead
+                Senior Full-Stack Engineer | AI-Augmented Product Engineering
               </div>
               <h1>Muhammad Usama</h1>
-              <h2 className='hero-subtitle'>
-                5+ Years Experience in React.js, Next.js & React Native
-              </h2>
+              <h2 className='hero-subtitle'>React.js · Next.js · Node.js · TypeScript</h2>
               <p className='hero-description'>
-                I lead frontend teams to build scalable web and mobile applications. Specializing in
-                React ecosystem, client communication, and delivering exceptional user experiences.
+                Senior Full-Stack Engineer with 5+ years building scalable, production-grade web
+                applications. Experienced in frontend architecture, API integration, data-driven
+                workflows, technical leadership, and using modern AI tools to accelerate delivery.
               </p>
 
               <div className='hero-stats'>
@@ -179,7 +179,7 @@ function App() {
                 </div>
                 <div className='stat'>
                   <span className='stat-number'>30+</span>
-                  <span className='stat-label'>Projects</span>
+                  <span className='stat-label'>Featured Platforms</span>
                 </div>
               </div>
 
@@ -222,28 +222,30 @@ function App() {
           >
             <UserCheck className='section-icon' />
             <h2>Professional Profile</h2>
-            <p className='section-subtitle'>Senior Frontend Developer with Leadership Experience</p>
+            <p className='section-subtitle'>
+              Senior Full-Stack Engineer with Product Engineering Focus
+            </p>
           </motion.div>
 
           <div className='about-content'>
             {[
               {
                 icon: <Code size={24} />,
-                title: 'Technical Expertise',
+                title: 'Full-Stack Engineering',
                 description:
-                  '5+ years mastering React.js, Next.js, and React Native. Expert in modern frontend architecture, performance optimization, and scalable application development.',
+                  '5+ years building production-grade applications with React.js, Next.js, TypeScript, Node.js, Express.js, PostgreSQL, MongoDB, Prisma, and AWS.',
               },
               {
                 icon: <Users size={24} />,
-                title: 'Team Leadership',
+                title: 'Technical Leadership',
                 description:
-                  'Leading teams of 6+ developers, conducting code reviews, and establishing development standards for enterprise projects.',
+                  'Leading technical decisions, mentoring developers, conducting code reviews, and translating business requirements into scalable engineering solutions.',
               },
               {
-                icon: <MessageSquare size={24} />,
-                title: 'Client Communication',
+                icon: <Sparkles size={24} />,
+                title: 'AI-Augmented Delivery',
                 description:
-                  'Expert in requirements gathering, stakeholder management, and translating business needs into technical specifications.',
+                  'Using AI-assisted development for prompt-driven debugging, refactoring, documentation, test planning, and workflow automation to improve delivery efficiency.',
               },
             ].map((item, index) => (
               <motion.div
@@ -281,34 +283,34 @@ function App() {
           <div className='timeline'>
             {[
               {
-                title: 'Senior Software Engineer & Frontend Team Lead',
+                title: 'Senior Software Engineer',
                 company: 'CodeFulcrum',
                 period: 'Feb 2022 - Present',
                 location: 'Lahore, Pakistan',
                 tags: [
-                  { icon: <Code size={12} />, label: 'Frontend Lead' },
-                  { icon: <Users size={12} />, label: 'Team Management' },
-                  { icon: <MessageSquare size={12} />, label: 'Client Liaison' },
+                  { icon: <Code size={12} />, label: 'Full-Stack' },
+                  { icon: <Users size={12} />, label: 'Mentorship' },
+                  { icon: <MessageSquare size={12} />, label: 'Client Delivery' },
                 ],
                 achievements: [
-                  'Lead team of 6+ frontend developers',
-                  'Architect scalable React/Next.js solutions',
-                  'Mentor junior developers and conduct training',
-                  'Client requirements gathering and management',
-                  'Improve code quality and development processes',
+                  'Lead full-stack delivery using React.js, Next.js, TypeScript, Node.js, and Express.js',
+                  'Define scalable project structures, component systems, routing, and state management',
+                  'Integrate REST APIs and data-driven workflows with PostgreSQL, MongoDB, and Prisma',
+                  'Support production readiness with AWS and deployment workflow configuration',
+                  'Mentor developers and use AI-assisted tools to accelerate debugging and documentation',
                 ],
               },
               {
                 title: 'Software Engineer',
-                company: 'Graffites Solutions',
+                company: 'Graffitecs Solutions',
                 period: 'Mar 2021 - Jan 2022',
                 location: 'Lahore, Pakistan',
                 tags: [],
                 achievements: [
-                  'Developed React & Next.js applications',
-                  'Implemented Redux Toolkit for state management',
-                  'Collaborated with backend teams on API integration',
-                  'Participated in code reviews and agile processes',
+                  'Developed responsive web interfaces using React.js, Next.js, TypeScript, HTML, and CSS',
+                  'Implemented reusable UI components and frontend workflows aligned with business needs',
+                  'Integrated backend APIs, handled data rendering, and supported end-user debugging',
+                  'Collaborated through code reviews, troubleshooting, and documentation',
                 ],
               },
             ].map((job, index) => (
@@ -367,90 +369,102 @@ function App() {
           >
             <Cpu className='section-icon' />
             <h2>Technical Skills</h2>
-            <p className='section-subtitle'>5+ years mastering modern technologies</p>
+            <p className='section-subtitle'>Full-stack, cloud, and AI-augmented engineering</p>
           </motion.div>
 
           <div className='skills-grid'>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className='skill-category'
-            >
-              <h3>
-                <Code size={20} /> Frontend
-              </h3>
-              <div className='skill-items'>
-                {[
-                  { name: 'React.js', level: '95%', years: '5+ years' },
-                  { name: 'Next.js', level: '90%', years: '4 years' },
-                  { name: 'React Native', level: '85%', years: '3 years' },
-                  { name: 'TypeScript', level: '88%', years: '4 years' },
-                ].map((skill, index) => (
-                  <div key={skill.name} className='skill-item' style={{ '--index': index }}>
-                    <span className='skill-name'>{skill.name}</span>
-                    <div className='skill-bar'>
-                      <div className='skill-level' style={{ width: skill.level }}></div>
-                    </div>
-                    <span className='skill-years'>{skill.years}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className='skill-category'
-            >
-              <h3>
-                <Palette size={20} /> UI & Styling
-              </h3>
-              <div className='skill-tags'>
-                {[
-                  'Tailwind CSS',
-                  'Material-UI',
-                  'Chakra UI',
-                  'Bootstrap',
-                  'HTML',
-                  'SCSS/SASS',
-                  'CSS3',
-                ].map((skill) => (
-                  <span key={skill} className='skill-tag'>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className='skill-category'
-            >
-              <h3>
-                <Database size={20} /> State & Tools
-              </h3>
-              <div className='skill-tags'>
-                {[
+            {[
+              {
+                icon: <Code size={20} />,
+                title: 'Frontend',
+                skills: [
+                  'React.js',
+                  'Next.js',
+                  'TypeScript',
+                  'JavaScript',
                   'Redux Toolkit',
                   'React Query',
-                  'Context API',
-                  'Git & GitHub',
-                  'Jest',
-                  'Webpack',
-                ].map((skill) => (
-                  <span key={skill} className='skill-tag'>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+                  'HTML5',
+                  'CSS3',
+                  'Tailwind CSS',
+                  'Material UI',
+                  'Chakra UI',
+                  'Bootstrap',
+                  'SCSS',
+                  'Angular',
+                ],
+              },
+              {
+                icon: <Database size={20} />,
+                title: 'Backend & Databases',
+                skills: [
+                  'Node.js',
+                  'Express.js',
+                  'REST APIs',
+                  'Authentication',
+                  'PostgreSQL',
+                  'MongoDB',
+                  'Prisma ORM',
+                  'Data Modeling',
+                ],
+              },
+              {
+                icon: <Cloud size={20} />,
+                title: 'Cloud & DevOps',
+                skills: [
+                  'AWS',
+                  'Git',
+                  'GitHub',
+                  'CI/CD',
+                  'Deployment Workflows',
+                  'Environment Configuration',
+                ],
+              },
+              {
+                icon: <Palette size={20} />,
+                title: 'Architecture',
+                skills: [
+                  'Scalable Frontend Architecture',
+                  'Reusable Components',
+                  'Responsive Design',
+                  'Performance Optimization',
+                  'Code Reviews',
+                  'Technical Documentation',
+                ],
+              },
+              {
+                icon: <Sparkles size={20} />,
+                title: 'AI & Productivity',
+                skills: [
+                  'AI-Assisted Development',
+                  'Prompt-Driven Debugging',
+                  'Refactoring',
+                  'Documentation',
+                  'Test Planning',
+                  'Workflow Automation',
+                ],
+              },
+            ].map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='skill-category'
+              >
+                <h3>
+                  {category.icon} {category.title}
+                </h3>
+                <div className='skill-tags'>
+                  {category.skills.map((skill) => (
+                    <span key={skill} className='skill-tag'>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -467,7 +481,9 @@ function App() {
           >
             <Globe className='section-icon' />
             <h2>Projects</h2>
-            <p className='section-subtitle'>Web & Mobile applications delivered</p>
+            <p className='section-subtitle'>
+              Production platforms across energy, fleet, AI, e-commerce, and education
+            </p>
           </motion.div>
 
           <div className='projects-grid'>
@@ -475,49 +491,52 @@ function App() {
               {
                 type: 'Web App',
                 icon: <Monitor size={16} />,
-                title: 'MYEPC Platform',
-                role: 'Lead Developer',
-                description: 'Building energy performance certificate management system.',
-                tech: ['React.js', 'TypeScript', 'Mapbox', 'Node.js'],
-                link: 'https://app.alta-group.eu/',
+                title: 'MYEPC',
+                role: 'Energy Certification & Document Management',
+                description:
+                  'Developed React.js and TypeScript interfaces, integrated APIs, and implemented map and document management workflows for building energy performance certification.',
+                tech: ['React.js', 'TypeScript', 'REST APIs', 'Map Integration'],
+                link: 'https://app.myepc.be/',
               },
               {
                 type: 'Web App',
                 icon: <Monitor size={16} />,
                 title: 'TrackHero',
-                role: 'Frontend Lead',
-                description: 'Fleet management system with real-time vehicle tracking.',
-                tech: ['Next.js', 'TypeScript', 'WebSockets', 'Chart.js'],
+                role: 'Fleet Management Platform',
+                description:
+                  'Built Next.js-based interfaces and integrated real-time data APIs for vehicle tracking, reporting, and fleet activity management.',
+                tech: ['Next.js', 'TypeScript', 'REST APIs', 'Real-time Data'],
                 link: 'https://trackhero.com/',
               },
               {
                 type: 'Web App',
                 icon: <Monitor size={16} />,
-                title: 'STRADA AI',
-                role: 'Technical Lead',
-                description: 'AI-driven building management tool with automation features.',
-                tech: ['React.js', 'AI Integration', 'Material-UI', 'Express'],
-                link: 'https://www.strada.ai/',
+                title: 'STRADA',
+                role: 'AI-Enabled Building Management',
+                description:
+                  'Developed UI modules and integrated AI-supported workflows for automated task generation, vendor management, certifications, and events.',
+                tech: ['React.js', 'TypeScript', 'AI Integration', 'Material UI'],
+                link: 'https://strada.ai/',
               },
               {
-                type: 'Mobile App',
-                icon: <Smartphone size={16} />,
-                title: 'HealthTrack Pro',
-                role: 'Mobile Lead',
+                type: 'Web App',
+                icon: <Monitor size={16} />,
+                title: 'Lalaji',
+                role: 'Marketplace & E-Commerce Platform',
                 description:
-                  'Healthcare monitoring app with real-time vitals tracking and doctor consultation.',
-                tech: ['React Native', 'Firebase', 'HealthKit', 'Redux'],
-                link: null,
+                  'Implemented marketplace UI features including cart, billing, product flows, and checkout experiences.',
+                tech: ['React.js', 'Next.js', 'E-Commerce', 'Responsive UI'],
+                link: 'https://lalaaji.com/',
               },
               {
-                type: 'Mobile App',
-                icon: <Smartphone size={16} />,
-                title: 'FoodExpress Delivery',
-                role: 'Lead Developer',
+                type: 'Web App',
+                icon: <Monitor size={16} />,
+                title: 'SkoolFame',
+                role: 'School Management Platform',
                 description:
-                  'Food delivery app with real-time order tracking and payment integration.',
-                tech: ['React Native', 'Google Maps', 'Stripe', 'Node.js'],
-                link: null,
+                  'Designed and developed interfaces for school management, user groups, posts, and administrative workflows.',
+                tech: ['React.js', 'TypeScript', 'Admin Dashboards', 'User Management'],
+                link: 'https://skoolfame.com/',
               },
             ].map((project, index) => (
               <motion.div
@@ -559,6 +578,49 @@ function App() {
         </div>
       </section>
 
+      {/* Education Section */}
+      <section id='education' className='experience'>
+        <div className='container'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='section-header'
+          >
+            <GraduationCap className='section-icon' />
+            <h2>Education</h2>
+            <p className='section-subtitle'>Academic foundation in computer science</p>
+          </motion.div>
+
+          <div className='timeline'>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className='timeline-item'
+            >
+              <div className='timeline-marker'>
+                <div className='marker-dot'></div>
+              </div>
+              <div className='timeline-content'>
+                <div className='timeline-header'>
+                  <h3>Bachelor of Computer Science (BSCS)</h3>
+                  <span className='company'>
+                    Khawaja Fareed University of Engineering and Information Technology
+                  </span>
+                  <span className='period'>Feb 2017 - Feb 2021</span>
+                  <span className='location'>
+                    <MapPin size={14} /> Rahim Yar Khan, Pakistan
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id='contact' className='contact'>
         <div className='container'>
@@ -585,8 +647,8 @@ function App() {
               <div className='contact-card'>
                 <h3>Get In Touch</h3>
                 <p className='contact-description'>
-                  Available for senior frontend positions, team lead roles, and challenging
-                  projects.
+                  Available for senior full-stack engineering roles, technical leadership
+                  opportunities, and challenging product engineering projects.
                 </p>
 
                 <div className='contact-details'>
@@ -681,7 +743,9 @@ function App() {
                 <Code size={24} />
                 <span>M.Usama</span>
               </div>
-              <p className='footer-description'>Senior Frontend Developer & Team Lead</p>
+              <p className='footer-description'>
+                Senior Full-Stack Engineer | AI-Augmented Product Engineering
+              </p>
             </div>
 
             <div className='footer-links'>
@@ -697,7 +761,7 @@ function App() {
           </div>
 
           <div className='footer-bottom'>
-            <p>© {new Date().getFullYear()} Muhammad Usama. Senior Frontend Developer.</p>
+            <p>© {new Date().getFullYear()} Muhammad Usama. Senior Full-Stack Engineer.</p>
             <div className='footer-cta'>
               <a href='/M.Usama.pdf' download className='btn-outline'>
                 <Download size={16} />
